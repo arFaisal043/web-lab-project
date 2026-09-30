@@ -25,10 +25,55 @@ function addToCart(name, price) {
 async function loadCoffees() {
   let coffees = [];
   try {
-    const response = await fetch("../data/menu.json");
+    const response = await fetch("../data/coffees.json");
     coffees = await response.json();
   } catch (error) {
     console.error("Error loading coffees:", error);
+    // Fallback if running via file:// without a server
+    coffees = [
+      {
+        id: 1,
+        name: "Espresso",
+        price: 250,
+        image:
+          "https://images.unsplash.com/photo-1510591509098-f4fdc6d0ff04?w=500&q=80",
+      },
+      {
+        id: 2,
+        name: "Latte",
+        price: 350,
+        image:
+          "https://images.unsplash.com/photo-1541167760496-1628856ab772?w=500&q=80",
+      },
+      {
+        id: 3,
+        name: "Cappuccino",
+        price: 300,
+        image:
+          "https://images.unsplash.com/photo-1534040385115-33dcb3acba5b?w=500&q=80",
+      },
+      {
+        id: 4,
+        name: "Americano",
+        price: 280,
+        image:
+          "https://images.unsplash.com/photo-1559525839-b184a4d698c7?w=500&q=80",
+      },
+      {
+        id: 5,
+        name: "Mocha",
+        price: 380,
+        image:
+          "https://images.unsplash.com/photo-1497935586351-b67a49e012bf?w=500&q=80",
+      },
+      {
+        id: 6,
+        name: "Macchiato",
+        price: 320,
+        image:
+          "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=500&q=80",
+      },
+    ];
   }
   renderCoffees(coffees);
 }
@@ -42,7 +87,7 @@ function renderCoffees(coffees) {
             <div class="menu-item">
                 <img src="${coffee.image}" alt="${coffee.name}">
                 <h3>${coffee.name}</h3>
-                <p>$${coffee.price.toFixed(2)}</p>
+                <p>৳${coffee.price}</p>
                 <button onclick="addToCart('${coffee.name}', ${coffee.price})">Add to Cart</button>
             </div>
         `;
