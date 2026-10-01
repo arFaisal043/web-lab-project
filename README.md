@@ -1,37 +1,42 @@
-# Bean & Brew - Online Coffee Shop
+# Bean & Brew
 
-Welcome to the **Bean & Brew** online coffee shop project! This is a static web application built using HTML, CSS, and JavaScript. 
+Bean & Brew is a simple and elegant e-commerce web application for an online coffee shop. It is built using vanilla HTML, CSS, and JavaScript, demonstrating core frontend concepts without relying on external frameworks.
 
-## ☕ Project Overview
+## Features
 
-Bean & Brew is a beautifully designed, responsive e-commerce front-end for a fictional artisanal coffee roaster. It allows users to browse coffee products, learn about the brand, and add items to a shopping cart.
+- **Home Page:** A welcoming landing page featuring featured coffees and customer testimonials.
+- **Menu:** Displays a list of available coffees fetched dynamically from a JSON data source.
+- **Shopping Cart:** 
+  - Add coffees to the cart.
+  - Update quantities.
+  - Remove items from the cart.
+  - Calculate total price.
+  - Simulated checkout process.
+- **About Us:** Information about the coffee shop's history and mission.
+- **Contact Us:** A contact form for customer inquiries.
+- **Responsive Design:** Optimized for various screen sizes, ensuring a seamless experience across desktop and mobile devices.
 
-## 🗂️ Project Structure
+## Project Structure
 
-The project is structured into three main directories:
+The project is organized into the following directories:
 
-- `/html/`: Contains the structural markup for all pages.
-  - `index.html` - The Home page with featured products and value propositions.
-  - `menu.html` - The Shop/Menu page to browse all coffee products.
-  - `about.html` - The Our Story page detailing the brand's history.
-  - `contact.html` - The Contact page with a form and location details.
-  - `cart.html` - The Shopping Cart page to review selected items.
-- `/css/`: Contains the styling for the website.
-  - `styles.css` - Shared global styles, variables, typography, and utility classes.
-  - `index.css`, `menu.css`, etc. - Page-specific stylesheets.
-- `/js/`: Contains the interactive logic.
-  - `cart.js` - Shared shopping cart logic for adding, removing, and updating items using `localStorage`.
-  - `menu.js`, `cart-page.js`, `contact.js` - Page-specific JavaScript files.
+- `html/`: Contains all the HTML pages (`home.html`, `menu.html`, `cart.html`, `about.html`, `contact.html`).
+- `css/`: Contains the CSS stylesheets for each corresponding HTML page to manage layout and design.
+- `js/`: Contains the JavaScript files that handle the logic, interactivity, and state management (like cart operations and fetching data).
+- `data/`: Contains `coffees.json`, which serves as a mock database for the menu items.
+- `images/`: (If applicable) Used for storing local image assets. Currently, the project uses external URLs for images.
 
-## 🚀 Getting Started
+## How to Run
 
-Since this is a static website, no complex setup or build process is required!
+Since this project relies on vanilla web technologies, you don't need a build step or a complex server setup. 
 
-1. Clone or download this repository.
-2. Open the `html/index.html` file directly in any modern web browser to view the site.
+1. Clone or download the repository to your local machine.
+2. Navigate to the project directory.
+3. Open the `html/home.html` file directly in any modern web browser to start exploring the site.
 
-## ✨ Features
 
-- **Responsive Design**: Looks great on desktop, tablet, and mobile devices.
-- **Dynamic Shopping Cart**: Users can add products to their cart, view cart totals, and update quantities. The cart data persists across page reloads using browser local storage.
-- **Modern UI**: Clean, aesthetic design with font-awesome icons and high-quality imagery.
+## Technologies Used
+
+- **HTML5:** Semantic structure.
+- **CSS3:** Styling, Flexbox, Grid, and responsive media queries.
+- **JavaScript (ES6):** DOM manipulation, Fetch API, LocalStorage (for cart persistence).
